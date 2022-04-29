@@ -11,13 +11,13 @@ import (
 	"os"
 )
 
-func createHash(key string) string {
+func CreateHash(key string) string {
 	hasher := md5.New()
 	hasher.Write([]byte(key))
 	return hex.EncodeToString(hasher.Sum(nil))
 }
 
-func encrypt(data []byte, passphrase string) []byte {
+func Encrypt(data []byte, passphrase string) []byte {
 	block, _ := aes.NewCipher([]byte(createHash(passphrase)))
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
@@ -31,7 +31,7 @@ func encrypt(data []byte, passphrase string) []byte {
 	return ciphertext
 }
 
-func decrypt(data []byte, passphrase string) []byte {
+func Decrypt(data []byte, passphrase string) []byte {
 	key := []byte(createHash(passphrase))
 	block, err := aes.NewCipher(key)
 	if err != nil {
@@ -50,13 +50,13 @@ func decrypt(data []byte, passphrase string) []byte {
 	return plaintext
 }
 
-func encryptFile(filename string, data []byte, passphrase string) {
+func EncryptFile(filename string, data []byte, passphrase string) {
 	f, _ := os.Create(filename)
 	defer f.Close()
 	f.Write(encrypt(data, passphrase))
 }
 
-func decryptFile(filename string, passphrase string) []byte {
+func DecryptFile(filename string, passphrase string) []byte {
 	data, _ := ioutil.ReadFile(filename)
 	return decrypt(data, passphrase)
 }
