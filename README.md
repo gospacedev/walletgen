@@ -43,7 +43,9 @@ func main() {
 	fmt.Printf("Decrypted: %s\n", plaintext)
 }
 ```
+
 ## TODO
+
 - [ ] Build decrypt example
 
 ## Acknowledgement
