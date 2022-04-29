@@ -1,4 +1,8 @@
 # cipher
+
+![For Coffee](https://img.shields.io/badge/BTC-For%20Coffee-green)
+`1HgvMhBraWpr6c72VTjgF2KVZftCDp6Zst`
+
 A way to encrypt strings in Go
 
 Using md5 for hashing and Galois/Counter Mode for the keys
