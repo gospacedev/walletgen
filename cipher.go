@@ -18,7 +18,7 @@ func CreateHash(key string) string {
 }
 
 func Encrypt(data []byte, passphrase string) []byte {
-	block, _ := aes.NewCipher([]byte(createHash(passphrase)))
+	block, _ := aes.NewCipher([]byte(CreateHash(passphrase)))
 	gcm, err := cipher.NewGCM(block)
 	if err != nil {
 		panic(err.Error())
@@ -32,7 +32,7 @@ func Encrypt(data []byte, passphrase string) []byte {
 }
 
 func Decrypt(data []byte, passphrase string) []byte {
-	key := []byte(createHash(passphrase))
+	key := []byte(CreateHash(passphrase))
 	block, err := aes.NewCipher(key)
 	if err != nil {
 		panic(err.Error())
@@ -53,10 +53,10 @@ func Decrypt(data []byte, passphrase string) []byte {
 func EncryptFile(filename string, data []byte, passphrase string) {
 	f, _ := os.Create(filename)
 	defer f.Close()
-	f.Write(encrypt(data, passphrase))
+	f.Write(Encrypt(data, passphrase))
 }
 
 func DecryptFile(filename string, passphrase string) []byte {
 	data, _ := ioutil.ReadFile(filename)
-	return decrypt(data, passphrase)
+	return Decrypt(data, passphrase)
 }
