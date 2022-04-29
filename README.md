@@ -45,5 +45,5 @@ func main() {
 ```
 ## Acknowledgement
 
-[The Polyglot Developer](https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/)
+https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/
 
