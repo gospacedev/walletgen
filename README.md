@@ -43,6 +43,9 @@ func main() {
 	fmt.Printf("Decrypted: %s\n", plaintext)
 }
 ```
+## TODO
+- [ ] Build decrypt example
+
 ## Acknowledgement
 
 https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/
