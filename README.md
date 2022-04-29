@@ -1,5 +1,6 @@
 # cipher
 A way to encrypt strings in Go
+
 Using md5 for hashing and Galois/Counter Mode for the keys
 
 ## Usage
