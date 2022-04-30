@@ -3,7 +3,7 @@ package cipher
 import (
 	"crypto/aes"
 	"crypto/cipher"
-	"crypto/md5"
+	"crypto/sha256"
 	"crypto/rand"
 	"encoding/hex"
 	"io"
@@ -12,7 +12,7 @@ import (
 )
 
 func CreateHash(key string) string {
-	hasher := md5.New()
+	hasher := sha256.New()
 	hasher.Write([]byte(key))
 	return hex.EncodeToString(hasher.Sum(nil))
 }
