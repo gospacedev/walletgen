@@ -49,9 +49,5 @@ func main() {
 
 - [ ] Build decrypt example
 
-## Acknowledgement
-
-https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/
-
 ### For Coffee
 [![DOGE Donate](https://img.shields.io/badge/DOGE-For%20Coffee-green)](https://dogechain.info/address/DSr9btWDuDcdSg4yXkSMYjbRMLEUqp4ijt)`DSr9btWDuDcdSg4yXkSMYjbRMLEUqp4ijt`
