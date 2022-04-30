@@ -1,5 +1,7 @@
 # cipher
 
+[![DOGE Donate](https://img.shields.io/badge/DOGE-For%20Coffee-green)](https://dogechain.info/address/DSr9btWDuDcdSg4yXkSMYjbRMLEUqp4ijt)
+
 A way to encrypt strings in Go
 
 Using md5 for hashing and Galois/Counter Mode for the keys
