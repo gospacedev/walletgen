@@ -45,12 +45,10 @@ func main() {
 ```
 
 ## TODO
-
 - [ ] Build decrypt example
 
 ## For Coffee
 BTC: `1F5qqrV9bX8Z1eyvy6MBxyVCKnT8cc4Hpc`
 
 ## Acknowledgement
-
 https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/
