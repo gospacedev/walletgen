@@ -1,7 +1,5 @@
 # cipher
-A way to encrypt strings in Go
-
-Using md5 for hashing and Galois/Counter Mode for the keys
+Uses Sum256 encryption to password protect strings
 
 ## Usage
 
@@ -19,33 +17,21 @@ Here's an example:
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 
 	"github.com/gocrazygh/cipher"
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-
-	fmt.Println("Enter text: ")
-	scanner.Scan()
-	text := scanner.Text()
-
-	fmt.Println("Enter password:")
-	scanner.Scan()
-	password := scanner.Text()
-
-	ciphertext := cipher.Encrypt([]byte(text), password)
+	ciphertext,_ := Encrypt([]byte(" witch collapse practice feed shame open despair creek road again ice least"), "password")
 	fmt.Printf("Encrypted: %x\n", ciphertext)
-	plaintext := cipher.Decrypt(ciphertext, password)
+	plaintext,_ := Decrypt(ciphertext, "password")
 	fmt.Printf("Decrypted: %s\n", plaintext)
 }
 ```
 
-## TODO
-- [ ] Build decrypt example
-
-## Acknowledgement
-https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/
+Terminal output:
+```
+Encrypted: dae1969f44375407363e1431a9ae47b1cdd216a966afae1f2a86b4d4718a496236d408b085db4837c35358c465c3a4edf04b5acdf76d20433fe6680ba64f358eed7492465c7674fe38851f2935c99dc3e562b9de43bc5e24f75c0ddd1547111ac926d0dc1c3a66
+Decrypted:  witch collapse practice feed shame open despair creek road again ice least
+```
