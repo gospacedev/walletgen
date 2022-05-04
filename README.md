@@ -1,5 +1,5 @@
 # cipher
-Encrypts strings using Sum256
+Encrypts strings with AES256
 
 ## Usage
 
