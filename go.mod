@@ -1,4 +1,4 @@
-module hello
+module cipher
 
 go 1.18
 
