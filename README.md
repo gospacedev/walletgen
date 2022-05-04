@@ -1,5 +1,5 @@
 # cipher
-Uses Sum256 encryption to password protect strings
+Encrypts strings using Sum256
 
 ## Usage
 
@@ -9,7 +9,7 @@ go get github.com/gocrazygh/cipher
 
 If you are working outside the GOPATH:
 ```
-go mod init <module name>
+go mod init <module-name>
 ```
 
 Here's an example:
