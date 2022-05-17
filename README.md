@@ -1,5 +1,5 @@
 # btcwallet
-Btcwallet is a libary of Bitcoin wallet generators in python, create public keys, private keys, and addresses.
+Bitcoin wallet generators in python, create public keys, private keys, and addresses.
 
 Currently it has:
 - Legacy Addresses
