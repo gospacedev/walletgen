@@ -1,4 +1,4 @@
-# btcwallet
+# walletgen
 A library of simple bitcoin wallet generators
 
 ## Usage
