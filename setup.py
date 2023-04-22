@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='walletgen'
+    name='walletgen',
     version='1.0',
     author='Grantley Cullar',
     description='A library of simple bitcoin wallet generators',
@@ -11,5 +11,4 @@ setup(
         'Mnemonic',
         'bip32utils'
     ],
-    }
 )
